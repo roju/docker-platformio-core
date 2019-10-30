@@ -11,7 +11,8 @@ RUN pip install -U platformio==${APP_VERSION} && \
     mkdir -p /workspace && \
     mkdir -p /.platformio && \
     chmod a+rwx /.platformio && \
-    apt-get update && apt-get install -y curl
+    apt-get update && \
+    apt-get install -y curl unzip
 
 USER 1001
 
