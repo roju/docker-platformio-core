@@ -10,7 +10,8 @@ LABEL app.name="${APP}" \
 RUN pip install -U platformio==${APP_VERSION} && \
     mkdir -p /workspace && \
     mkdir -p /.platformio && \
-    chmod a+rwx /.platformio
+    chmod a+rwx /.platformio && \
+    pip install wget
 
 USER 1001
 
