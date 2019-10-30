@@ -7,12 +7,12 @@ LABEL app.name="${APP}" \
       app.version="${APP_VERSION}" \
       maintainer="Ross Justin"
 
-RUN pip3 install -U pip setuptools && \
-	pip install -U platformio==${APP_VERSION} && \
+RUN pip install -U platformio==${APP_VERSION} && \
     mkdir -p /workspace && \
     mkdir -p /.platformio && \
     chmod a+rwx /.platformio && \
-    pip3 install -U httpie
+    apt-get update && \
+    apt-get install curl
 
 USER 1001
 
