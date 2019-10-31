@@ -1,7 +1,6 @@
 FROM python:3.8-slim
 
 LABEL app.name="platformio-core" \
-      app.version="${APP_VERSION}" \
       maintainer="Ross Justin"
 
 COPY dummy-esp8266 /opt/dummy-esp8266
