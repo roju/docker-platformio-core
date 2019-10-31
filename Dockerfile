@@ -13,6 +13,8 @@ RUN mkdir -p /workspace && \
     apt-get update && \
     apt-get install -y --no-install-recommends curl unzip && \
     pip install -U platformio==${APP_VERSION} && \
+    mkdir -p /.platformio && \
+    chmod a+rwx /.platformio && \
     pio platform install espressif8266 --with-package framework-arduinoespressif8266
 
 WORKDIR /opt/dummy-esp8266
